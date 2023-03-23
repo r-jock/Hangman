@@ -24,13 +24,6 @@
             string Mysuggestion = Console.ReadLine();
             string myWord = "";
 
-            for (int i; i < searchedWord.Length; i++)
-            {
-                if (Mysuggestion == searchedWord)
-                {
-                    myWord = searchedWord[i] + myWord;
-                }
-            }
             
             
             Console.ReadKey();
