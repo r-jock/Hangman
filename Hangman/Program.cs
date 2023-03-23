@@ -10,12 +10,12 @@
             Random ranWord = new Random(); // New Randomgenerator
             int Rword = ranWord.Next(0, Wordlist.Length); // Generates a Random number from the Length of the Array "Wordlist"
             selectedWord = Wordlist[Rword].ToLower();
-            Console.WriteLine(selectedWord);
-            for (int i = 0;i < selectedWord.Length; i++)
+            Console.WriteLine(selectedWord); // For DEBUGGING
+            for (int i = 0;i < selectedWord.Length; i++) // Iterate through the Selected Word
             {
-                searchedWord = searchedWord + '_';
+                searchedWord = searchedWord + '_'; // replace the Letter of the Word with "_".
             }
-            Console.Write(searchedWord);
+            Console.Write(searchedWord); // Printed The Word as '_' on the Console
             Console.ReadKey();
 
         }
