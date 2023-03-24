@@ -47,16 +47,37 @@
 
         static void Main(string[] args)
         {
-            
+        
             init("Word");
             getWord();
             do
             {
+                
                 char c = Console.ReadKey(true).KeyChar;
-                countLetter(c);
+                Console.WriteLine();
+                int sum = countLetter(c);
+                if (sum == 0) misstake++;
+                Console.Clear();
+                Console.WriteLine("Your Letter "+ c + " is " + sum + " in this word!");
+                Console.WriteLine("Miss Guesses: " + misstake);
                 getWord();
 
-            } while (!won());
+            } while (!won() && misstake <=10);
+
+            if (!won())
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("YOU LOSE!");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("YOU WIN!");
+                Console.ResetColor();
+            }
             
             Console.ReadKey();
         }
