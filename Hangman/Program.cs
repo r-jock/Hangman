@@ -51,8 +51,7 @@
             init("Word");
             getWord();
             do
-            {
-                
+            {                
                 char c = Console.ReadKey(true).KeyChar;
                 Console.WriteLine();
                 int sum = countLetter(c);
